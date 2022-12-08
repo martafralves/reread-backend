@@ -24,6 +24,10 @@ dbconnect();
 
 app.use(require('cors')()); //enable cors
 
+app.use(cors({
+	origin: ['https://reread-app.onrender.com']
+			 }))
+
 //parse requests of content type - app/json
 app.use(bodyParser.json());
 //parse requests of content-type app/x-www-form-urlencoded
